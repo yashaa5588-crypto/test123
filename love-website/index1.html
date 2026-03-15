@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Happy Birthday Yashaa ❤️</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&family=Great+Vibes&display=swap" rel="stylesheet">
+
+<style>
+
+body{
+margin:0;
+font-family:'Georgia', serif;
+text-align:center;
+}
+
+/* ================= PAGE STYLE ================= */
+
+.page{
+display:none;
+min-height:100vh;
+padding:40px 20px;
+background-size:cover;
+background-position:center;
+background-repeat:no-repeat;
+position:relative;
+}
+
+#loginPage{
+display:block;
+background:black;
+color:white;
+}
+
+.skyText{
+margin-top:120px;
+font-size:42px;
+font-weight:bold;
+animation:glow 2s infinite alternate;
+}
+
+@keyframes glow{
+from{ text-shadow:0 0 10px pink; }
+to{ text-shadow:0 0 40px red; }
+}
+
+input{
+padding:12px;
+border-radius:25px;
+border:none;
+width:220px;
+}
+
+button{
+padding:10px 20px;
+border-radius:20px;
+border:none;
+background:#ff3366;
+color:white;
+cursor:pointer;
+margin:10px;
+}
+
+/* ================= MAIN PAGE ================= */
+
+#mainPage{
+background-image:url("1.jpg");
+}
+
+/* ================= ENVELOPES ================= */
+
+.envelope-row{
+display:flex;
+justify-content:space-evenly;
+flex-wrap:wrap;
+gap:40px;
+margin-top:60px;
+}
+
+.main-envelope img{
+width:220px;
+transition:0.3s;
+}
+
+.main-envelope:hover img{
+transform:scale(1.1);
+}
+
+.main-envelope{
+cursor:pointer;
+}
+
+.main-envelope p{
+font-weight:bold;
+margin-top:10px;
+color:#000;
+}
+
+/* ================= LETTER ================= */
+
+.letter{
+position:relative;
+max-width:650px;
+margin:60px auto;
+padding:50px;
+border-radius:8px;
+
+background-color:rgba(253,246,227,0.95);
+border:8px double #8b5e3c;
+box-shadow:0 20px 40px rgba(0,0,0,0.4);
+
+text-align:left;
+line-height:1.5;
+font-family:'Dancing Script', cursive;
+font-size:17px;
+color:#4b2e2e;
+
+overflow-y:auto;
+max-height:500px;
+}
+
+.letter::before{
+content:"";
+position:absolute;
+inset:0;
+background-image:url("memory-bg.jpg.jpg");
+background-size:300px;
+opacity:0.08;
+z-index:0;
+}
+
+.letter > *{
+position:relative;
+z-index:1;
+}
+
+/* ================= BACKGROUNDS ================= */
+
+#missPage,
+#memoryPage,
+#futurePage,
+#sadPage,
+#angryPage,
+#proudPage{
+background-image:url("memory-bg.jpg.jpg");
+}
+
+.backBtn{
+margin-top:20px;
+background:black;
+}
+
+/* ================= CLOUD WISH ================= */
+
+.dream-cloud{
+position:fixed;
+bottom:70px;
+right:30px;
+width:220px;
+height:120px;
+background:white;
+border-radius:60px;
+box-shadow:0 8px 20px rgba(0,0,0,0.3);
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+padding:15px;
+font-family:'Dancing Script', cursive;
+font-size:18px;
+cursor:pointer;
+}
+
+.dream-cloud::before{
+content:"";
+position:absolute;
+width:80px;
+height:80px;
+background:white;
+border-radius:50%;
+top:-30px;
+left:40px;
+}
+
+.dream-cloud::after{
+content:"";
+position:absolute;
+width:60px;
+height:60px;
+background:white;
+border-radius:50%;
+top:-20px;
+right:40px;
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- LOGIN PAGE -->
+
+<div id="loginPage" class="page">
+
+<div class="skyText">
+🎆 Happy Birthday Yashaa 🎆 <br>
+<small>This one opens with memories.</small>
+<h6>What was the colour of the dress i wore when we first met? </h6>
+</div>
+
+<br>
+
+<input type="password" id="password" placeholder="Enter password">
+
+<br>
+
+<button onclick="checkPassword()">Unlock</button>
+
+</div>
+
+
+<!-- MAIN PAGE -->
+
+<div id="mainPage" class="page">
+
+<h2>Choose an Envelope 💌</h2>
+
+<div class="envelope-row">
+
+<div class="main-envelope" onclick="openPage('missPage')">
+<img src="envelope.png">
+<p>Miss Me 💕</p>
+</div>
+
+<div class="main-envelope" onclick="openPage('memoryPage')">
+<img src="envelope.png">
+<p>Memories 🥰</p>
+</div>
+
+<div class="main-envelope" onclick="openPage('futurePage')">
+<img src="envelope.png">
+<p>Future 🌍</p>
+</div>
+
+<div class="main-envelope" onclick="openPage('openWhenPage')">
+<img src="envelope.png">
+<p>Open When 🔐</p>
+</div>
+
+</div>
+
+<div class="dream-cloud" onclick="openPage('dreamPage')">
+<h4>--Click here --<br></h4>
+A wish that never came true…  
+but will always remain a dream ☁️
+</div>
+
+</div>
+
+
+<!-- MISS PAGE -->
+
+<div id="missPage" class="page">
+
+<div class="letter">
+
+<h2>When You Miss Me 💕</h2>
+
+<p>
+Even if I’m not physically there, my love is always with you.
+</p>
+
+<button class="backBtn" onclick="goBack()">Back</button>
+
+</div>
+
+</div>
+
+
+<!-- MEMORY PAGE -->
+
+<div id="memoryPage" class="page">
+
+<div class="letter">
+
+<h2>Our Best Memories 🥰</h2>
+
+<p>
+<ul>
+
+<li>““त्या दिवशी आपण खूप हसलो होतो — जेव्हा मी खिचडी केली होती आणि ती खाताना आपण दोघं इतकं हसलो.” 😊</li>
+
+<li>अशूच्या घरी तू TV बघत बसायचास तेव्हा, तू जितका वेळ तिथे असायचास तितका वेळ माझं लक्ष फक्त तुझ्याकडेच असायचं 👀🤍</li>
+
+<li>तू इकडे राहत होतास तेव्हापासून, लहानपणापासूनच तुला रोज खिडकीतून पाहायची सवय लागली होती — तू येताना, ऑफिसला जाताना, ग्राउंडवर दोन मिनिटं जरी दिसलास तरी माझा दिवस व्हायचा 💕</li>
+
+<li>तुझ्या घरी दूधाची पिशवी घ्यायला जाणं 🥛</li>
+
+<li>एकदा तुझ्याकडे आले होते तेव्हा तू काम करत होतास आणि मी तुझ्या मांडीवरच झोपले… तू शांतपणे मला थोपटत होतास 🥺🤍</li>
+
+<li>काही नवीन घातलं की तुला दाखवायची घाई करणं 💃✨</li>
+
+<li>तू माझ्या जवळ शांत झोपलेला बघून मनात कल्पना करणं की तू आयुष्यभर माझाच आहेस 🤍 आणि तुझ्यावर अजून प्रेम वाढणं 💞</li>
+
+<li>तुझी लहान बाळासारखी काळजी घेणं 👶, तुला अंघोळ घालणं 🚿 — ही माझी सगळ्यात आवडती आठवण आहे.</li>
+
+<li>गाडीवर बसले की मी रागात असले तरी हात धरून मला जवळ ओढणं 🤍</li>
+
+<li>“आपल्यात अजून जागा आहे, पुढे सरक” असं म्हणत हात हातात घेणं आणि हातावर हलकंसं kiss करणं 💋</li>
+
+<li>Scooty वर बसताना footer काढून देणं 🛵✨ — कधीच न विसरणं.</li>
+
+<li>तुझ्यासाठी कधी कधी जेवण बनवून आणणं, tiffin आणणं 🍲 आणि मग मनात विचार करत बसणं — “याला आवडलं असेल का?” 🥺</li>
+
+<li>Choco lava आणणं 🍫</li>
+
+<li>“आम्ही हे घर सोडून चाललोय” असं म्हणून मला चिडवणं 🥺 आणि माझं त्यावर रडणं — “तुम्ही जाऊ नका…” 🤍</li>
+
+<li>आपली पहिली भेटसुद्धा रडतच झाली… तू मला नेहमी “उद्या-परवा भेटू” असं म्हणून टाळायचास. त्या दिवशी तुझे sir भेटले म्हणून तू मला message केलास. मला वाटलं आजही भेट नाही होणार म्हणून रडतच घरी निघाले होते… पण शेवटी आपण भेटलो 🤍
+मी खूप nervous होते — इतक्या आवडत्या व्यक्तीला एवढ्या जवळून पहिल्यांदा बघत होते. मनात फक्त एकच विचार — “मी छान दिसायला हवं, काही चूक होता कामा नये…” 🥺✨</li>
+
+<li>CA preparation वेळी तुझे lectures download करून दिल्यावर तू मला दिलेली Cadbury 🍫 —मी 2-4 दिवस ती खाल्लीच नाही, फक्त बघत बसले… कारण ते माझं पहिलं gift होतं 🤍</li>
+
+<li>तू दिलेलं कडं — ते कधीच विसरू शकत नाही. माझा जीव आहे त्यात 🤍</li>
+
+<li>जेव्हा तू मला उचलून घेतलंस… त्या मिठीत मला इतकं शांत वाटलं की डोळ्यात पाणीच आलं 🥺 वाटलं सगळ्या तक्रारी सांगाव्यात आणि फक्त एवढंच म्हणावं — “मला सोडू नको.” 🤍✨</li>
+
+<li>पहिल्यांदा audit वरून तुला घरी घ्यायला गेले होते, तू Lemon Tree जवळ उतरला होतास 🌙
+तू कितीही “नको” म्हटलंस तरी मी ऐकलंच नाही — तुला रात्री घ्यायलाच आले आणि Maruti मंदिराच्या गल्लीत सोडलं 🙏 </li>
+
+<li>पुण्यात आपण पहिल्यांदा trip ला गेलो होतो तुझ्या passport साठी ✈️
+तेव्हा आपण तुझ्या नेहमीच्या hotel मध्ये जेवायला गेलो, जिथे तू आणि pappa जायचे. त्या दिवशी तू मला खास करून ताक पाजलं 🥛🤍 आणि जास्त पाणी पिऊ दिलं नाहीस — किती काळजी घेतलीस माझी 💧🥺</li>
+
+<li>8 March ला तू पुण्याला आलास आणि माझी वाट इतक्या patience ने बघत बसलास 🤍
+तुला पाहताच मला रडूच आवरलं नाही — माझा यश खरंच आलाय हे डोळ्यांवर विश्वास बसत नव्हता. रडू आवरत तुझ्या जवळ जाऊन हात हातात घेतला तेव्हा इतकं बरं आणि शांत वाटलं 💞</li>
+
+<li>पहिल्यांदा आपण एकाच गाडीवर बसलो आणि तू माझ्या मागे बसलास 🚗
+माझ्या खांद्यावर हात ठेवून गुदगुल्या केल्यास 😄💕</li>
+
+<li>त्या आजीच्या घरी पहिल्यांदा मला उचलून घेतलंस — “तुझं weight किती आहे बघतो” म्हणून 😁🤍 आणि आपण एकमेकांकडे अगदी जवळून बघत राहिलो 👀✨ </li>
+
+<li>आपला Goa चा best photo 🌴📸 आणि Pune चा तो candid फोटो — आयुष्यभर जपून ठेवावा असा 🖼️✨</li>
+
+<li>तुझ्या घरी राहायला आले होते तेव्हा रात्री थंडी वाजली ❄️ आणि गाढ झोपेतून उठून तू cooler बंद केलास — इतकी काळजी 🤍</li>
+
+<li>पुण्याच्या माझ्या room मध्ये तू भेंडी चिरत बसलास तेव्हा खरंच वाटलं आपण नवरा-बायको आहोत 👩‍❤️‍👨</li>
+
+<li>आपल्या शेवटच्या भेटीत तू दिलेलं surprise — कानातले 💎</li>
+
+<li>सुरुवातीला तुझ्या घरी आले की तू अभ्यास करत असायचास, तरी तुझ्या chair वर मला जवळ घेऊन बसवायचास 🤍 मी तुला hug करून शांत बसायचे… आणि तेव्हाच मला वाटायला लागलं की मला पण तू हवा आहेस 💞</li>
+
+<li>Alibag ला तुझ्या मांडीवर बसवून “बोल, मन मोकळं कर” असं म्हणत मला सगळं सांगायला लावणं 🤍</li>
+
+<li>Goa च्या पहिल्या trip ला travels मध्ये AC मुळे मला थंडी वाजत होती तेव्हा मला झाकून घेणं ❄️🤍</li>
+
+<li>Kharadi ला थांबलो होतो तेव्हा मी रागात असताना मला स्वतः खाऊ घालणं 🍽️</li>
+
+<li>•	Sinhgad ला त्या room मध्ये मला खूप काही बोलायचं होतं… शेवटी तू शांतपणे फिरत फिरत माझं सगळं ऐकलंस 🤍 माझ्या complain box मधल्या सगळ्या notes संपेपर्यंत… आणि मग मला शांत करून झोपवलंस 😌</li>
+
+<li>काकूच्या घरी मी तुझ्या मिठीत रडत होते, “मला सोडून जाऊ नको” म्हणत… आणि तू पाठीवर हात फिरवून मला शांत केलंस 🤍</li>
+
+<li>तुझ्या घरी तुझ्या मांडीवर बसून खाऊ घालणं — सगळ्यात गोड आठवण 🤍</li>
+
+<li>आठवणी अजून खूप आहेत… मोजायला बसलो तर कमी पडतील 🤍</li>
+
+<li>Ani ek rahilch re tula nust yasha yasha yasha krun avaj den he tr mla khup avdt</li>
+
+<li>Ani tuzya kdun vishubai mazi vishubai aikun ghen pn khup bhari vatt 🥺</li>
+
+<li>Miss you Yasha… he sgl hvy mla… thod pn bhetl tri samadhani rahil 🥺</li>
+
+</ul>
+
+</p>
+
+
+<button class="backBtn" onclick="goBack()">Back</button>
+
+</div>
+
+</div>
+
+
+<!-- FUTURE PAGE -->
+
+<div id="futurePage" class="page">
+
+<div class="letter">
+
+<div style="display:flex;align-items:center;gap:40px;flex-wrap:wrap;">
+
+<div style="flex:1">
+
+<h2>My Future Goals With You 🌍</h2>
+
+<p>
+
+•	मला तुझ्यासोबत workout करायचं आहे 💪 आणि एकत्र fit राहायचं आहे.<br>
+•	मला तुझ्यासाठी नवीन नवीन पदार्थ बनवायचे आहेत 🍲 आणि तुला surprise द्यायचं आहे 🎁.<br>
+•	तुझा दिवस थकवणारा असेल तेव्हा तुला massage देऊन तुला relax करायचं आहे 💆‍♀️🤍.<br>
+
+•	मला तुझ्यासोबत family functions ला जायचं आहे 🎉, अभिमानाने तुझ्या बाजूला उभं राहायचं आहे 🤍.<br>
+•	मला balcony dates हव्यात 🌆, रात्री उशिरापर्यंत गप्पा हव्यात 🌙, आणि badminton खेळताना हसत राहायचं आहे 🏸😄.<br>
+•	मला तुझ्यासोबत शांत रात्रीच्या walk ला जायचं आहे 🚶‍♂️🚶‍♀️, हातात हात घेऊन आयुष्याबद्दल बोलायचं आहे 🤝✨.<br>
+•	मला तुझ्या सोबत आपल्या कारमध्ये long drive ला जायचं आहे 🚗💨
+•	मला तुझ्यासाठी छोटे छोटे surprise plan करायचे आहेत 🎊 फक्त तुझ्या चेहऱ्यावर हसू पाहण्यासाठी 😊.<br>
+•	मला तुझ्या family सोबत वेळ घालवायचा आहे 👨‍👩‍👧‍👦, तुझ्या mummy आणि aaji सोबत गप्पा मारायच्या आहेत 🥰, आणि त्या घराचा एक भाग व्हायचं आहे 🏡🤍. <br>
+•	मला सगळ्यांसाठी काहीतरी special करायचं आहे, पण ते मी तुला बोलून नाही सांगणार, फक्त करून दाखवेन 💛✨<br>
+•	Mummy चे सगळे काम हलके करायचे आहे, आणि त्यांच्याकडून सगळं शिकून त्यांना हवी ती सुन बनायची आहे 🥰<br>
+•	मला तुला घेऊन दुसऱ्या देशात फिरायला जायचं आहे ✈️🌍, प्रत्येक नवीन जागा तुझ्यासोबत अनुभवायची आहे आणि आपल्या आठवणी तयार करायच्या आहेत 💞.<br>
+•	मला तुझ्यासोबत म्हातारं व्हायचं आहे 👵👴, आयुष्याच्या प्रत्येक टप्प्यात तुझ्या बाजूला राहायचं आहे ❤️.<br>
+•	मला तुझ्या बाळाची आई व्हायचं आहे 👶🤍 आणि आपलं सुंदर कुटुंब तयार करायचं आहे 💞.<br>
+
+आणि हो… 🤍
+•	मला तुझ्याआधी मरायचं आहे, कारण तुझ्याशिवाय जगायला मला कधीच जमणार नाही, ना मी ते कधी imagine करू शकले आहे — पण त्यापेक्षा जास्त मला तुझ्यासोबत एक लांब, सुंदर आणि आनंदी आयुष्य जगायचं आहे ✨❤️.<br>
+
+</p>
+
+<button class="backBtn" onclick="goBack()">Back</button>
+
+</div>
+
+<div>
+
+<img src="future.jpg" style="width:220px;max-width:100%;border-radius:25px;box-shadow:0 8px 20px rgba(0,0,0,0.4);">
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+
+<!-- OPEN WHEN PAGE -->
+
+<div id="openWhenPage" class="page">
+
+<h2>Open When... 🔐</h2>
+
+<button onclick="openPage('sadPage')">When You're Sad</button>
+
+<button onclick="openPage('angryPage')">When You're Angry</button>
+
+<button onclick="openPage('proudPage')">When You Achieve Something</button>
+
+<br>
+
+<button class="backBtn" onclick="goBack()">Back</button>
+
+</div>
+
+
+<!-- SAD PAGE -->
+
+<div id="sadPage" class="page">
+
+<div class="letter">
+
+<h2>When You're Sad 💙</h2>
+
+<p>You are stronger than you think. I’ve seen it.</p>
+
+<button class="backBtn" onclick="goBack()">Back</button>
+
+</div>
+
+</div>
+
+
+<!-- ANGRY PAGE -->
+
+<div id="angryPage" class="page">
+
+<div class="letter">
+
+<h2>When You're Angry ❤️</h2>
+
+<p>may be ata mla shan't kraychi garaj nahi pdnar tuzi bayko krel sgl ata 🫡</p>
+
+<button class="backBtn" onclick="goBack()">Back</button>
+
+</div>
+
+</div>
+
+
+<!-- PROUD PAGE -->
+
+<div id="proudPage" class="page">
+
+<div class="letter">
+
+<h2>When You Achieve Something 🎉</h2>
+
+<p>•	During your CA articleship, you worked under 3 CAs, and even with so much work for 3 people, you did everything very well. 🫡<br>
+•	When you became a CA ✨<br>
+•	You bought a plot 🏡<br>
+•	Later, you bought a house 🏠<br>
+•	You got a job with a very good salary 💼💰 (I feel so proud that your first job had such a big salary)<br>
+•	You crack interviews so fast 🚀 (you are confident and really smart, I always feel proud of you)<br>
+•	Your work is so good that everyone likes it, so even when you wanted to resign, they gave you a salary match to keep you. 💪<br>
+•	At such a young age, you are in a senior position and handle work of senior people. Even though your juniors are older than you, you manage everything perfectly.<br>
+•	When meeting Teju’s soon-to-be husband, even though everyone else was senior, you spoke and made sure everyone knew things. You are really respectful and committed to your work. 🫡<br>
+•	Even with all this, you never show off. You have everyone’s respect, and I see how much people admire you. ❤️<br>
+I feel so proud of you seeing everything you have achieved. 🥹✨<br>
+•	I'm more excited to see you driving your new car 🥰 than the car itself 😁<br>
+</p>
+
+<button class="backBtn" onclick="goBack()">Back</button>
+
+</div>
+
+</div>
+
+
+<!-- DREAM PAGE -->
+
+<div id="dreamPage" class="page">
+
+<div class="letter" style="text-align:center">
+
+<h2>A Dream That Stayed A Dream ☁️</h2>
+
+<img src="child_photo.jpeg" style="width:260px;border-radius:15px;margin:20px 0;box-shadow:0 10px 25px rgba(0,0,0,0.4);">
+
+<br>
+
+<audio controls>
+<source src="song_y.mp4" type="audio/mpeg">
+</audio>
+
+<p style="margin-top:20px;">
+Some wishes are not meant to come true…  
+but they live forever in the heart.
+</p>
+
+<button class="backBtn" onclick="goBack()">Back</button>
+
+</div>
+
+</div>
+
+
+<script>
+
+function checkPassword(){
+
+if(document.getElementById("password").value==="black"){
+openPage('mainPage');
+}else{
+alert("Wrong password 😢");
+}
+
+}
+
+function openPage(id){
+
+var pages=document.getElementsByClassName("page");
+
+for(var i=0;i<pages.length;i++){
+pages[i].style.display="none";
+}
+
+document.getElementById(id).style.display="block";
+
+}
+
+function goBack(){
+openPage('mainPage');
+}
+
+</script>
+
+</body>
+</html>
